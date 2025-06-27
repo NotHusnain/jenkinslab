@@ -1,30 +1,10 @@
 pipeline {
-    agent any
-
-    stages {
-        stage('Clone') {
-            steps {
-                git 'https://github.com/your-username/your-repo.git'
-            }
-        }
-
-        stage('Build') {
-            steps {
-                sh 'npm install'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                sh 'npm test'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying...'
-                // Add deployment commands here
-            }
-        }
-    }
+            agent any
+            stages {
+                      stage('Hello') {
+                        steps {
+                                echo 'Hello from Jenkins!'
+                              }
+                        }
+                    }
 }
